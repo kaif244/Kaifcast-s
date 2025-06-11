@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>☀️ Smart Weather App</title>
+  <meta name="theme-color" content="#121212">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="color-overlay"></div> 
+  
+  <div class="weather-app">
+    <h1>ClimaCast ✨</h1>
+
+    <div class="controls">
+      <input type="text" id="locationInput" placeholder="🌆 Enter city" />
+      <button onclick="getWeather()">🔍</button>
+    </div>
+
+    <div class="location-and-language-options">
+        <div class="language-switch">
+          <label for="languageSelect">Language:</label>
+          <select id="languageSelect" onchange="getWeather()">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="ur">Urdu</option>
+            <option value="ps">Pashto</option>
+            <option value="mr">Marathi</option>
+            <option value="ar">Arabic</option>
+          </select>
+        </div>
+
+        <div class="geobutton">
+          <button onclick="useGeolocation()">📍 Use My Location</button>
+        </div>
+    </div>
+
+    <div class="toggles">
+      <div class="toggle-switch">
+        <label for="themeToggle">🌙 Dark Mode</label>
+        <input type="checkbox" id="themeToggle">
+      </div>
+
+      <div class="toggle-switch">
+        <label for="unitToggle">°C/°F</label>
+        <input type="checkbox" id="unitToggle" onchange="toggleUnits()">
+      </div>
+
+      <button id="micBtn">🎤 Voice</button>
+    </div>
+
+    <div class="loading-spinner" id="loadingSpinner"></div>
+
+    <div id="weatherResult" class="weather-result"></div>
+    <div id="hourlyForecastResult" class="hourly-forecast-result"></div>
+    <div id="forecastResult" class="daily-forecast-result"></div>
+    
+    <div class="datetime" id="datetime"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
