@@ -1,4 +1,4 @@
-const API_KEY = "d685bc78d49a4b97abf131720251106"; // Your API Key
+const API_KEY = "8f1f98250e844f47974143523250707"; // Your API Key
 const weatherResult = document.getElementById("weatherResult");
 const forecastResult = document.getElementById("forecastResult");
 const hourlyForecastResult = document.getElementById("hourlyForecastResult");
